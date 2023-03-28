@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Test_Invoice_Yhra.props" />
+</Project>
