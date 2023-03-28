@@ -1,0 +1,40 @@
+﻿@model List<Test_Invoice_Yhra.Models.DB.Customer>
+<main class="border p-3">
+    <div class="d-flex justify-content-between mb-3">
+        <h3>Lista de clientes</h3>
+        <a class="btn btn-primary" asp-controller="Customers" asp-action="Create">Agregar</a>
+    </div>
+    <table id="myTable" class="table table-bordered table-hover table-responsive table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>CustName</th>
+                <th>Adress</th>
+                <th>Status</th>
+                <th>CustomerTypeId</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.CustName</td>
+                    <td>@item.Adress</td>
+                    <td>@item.Status</td>
+                    <td>@item.CustomerTypeId</td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", null, new {id = item.Id}, new { @class = "btn btn-warning"})
+                    </td>
+                    <td>
+                        @Html.ActionLink("Eliminar", "Delete",null, null, null,null,  new { id = item.Id } , new{ @class = "btn btn-danger",})
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <ul>
+    </ul>
+</main>

@@ -1,27 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yhumb\\OneDrive\\Escritorio\\Test_For_Empresas\\Test_Invoice_Yhra\\Test_Invoice_Yhra.csproj": {}
+    "C:\\Users\\yohan\\Desktop\\PERSONAL\\.net\\Test_Invoice_Yhra\\Test_Invoice_Yhra.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yhumb\\OneDrive\\Escritorio\\Test_For_Empresas\\Test_Invoice_Yhra\\Test_Invoice_Yhra.csproj": {
+    "C:\\Users\\yohan\\Desktop\\PERSONAL\\.net\\Test_Invoice_Yhra\\Test_Invoice_Yhra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yhumb\\OneDrive\\Escritorio\\Test_For_Empresas\\Test_Invoice_Yhra\\Test_Invoice_Yhra.csproj",
+        "projectUniqueName": "C:\\Users\\yohan\\Desktop\\PERSONAL\\.net\\Test_Invoice_Yhra\\Test_Invoice_Yhra.csproj",
         "projectName": "Test_Invoice_Yhra",
-        "projectPath": "C:\\Users\\yhumb\\OneDrive\\Escritorio\\Test_For_Empresas\\Test_Invoice_Yhra\\Test_Invoice_Yhra.csproj",
-        "packagesPath": "C:\\Users\\yhumb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yhumb\\OneDrive\\Escritorio\\Test_For_Empresas\\Test_Invoice_Yhra\\obj\\",
+        "projectPath": "C:\\Users\\yohan\\Desktop\\PERSONAL\\.net\\Test_Invoice_Yhra\\Test_Invoice_Yhra.csproj",
+        "packagesPath": "C:\\Users\\yohan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yohan\\Desktop\\PERSONAL\\.net\\Test_Invoice_Yhra\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\yhumb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yohan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -42,7 +45,21 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.3.0, )"
             }
           },
           "imports": [
@@ -56,24 +73,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.14, 6.0.14]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.14, 6.0.14]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.14, 6.0.14]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.14, 6.0.14]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -82,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
