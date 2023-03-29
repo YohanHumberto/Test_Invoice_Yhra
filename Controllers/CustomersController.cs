@@ -40,21 +40,23 @@ namespace Test_Invoice_Yhra.Controllers
         public ActionResult Edit(int id)
         {
             ViewBag.ListCustomerType = new SelectList(customersTypesServices.GetAll(), "Id", "Description");
-            ViewBag.ListStatus = new SelectList(new Dictionary<int, string>() { { 1, "Activo" }, { 0, "Inactivo" } }.Select(a => new { value = a.Key, text = a.Value }), "value", "text");
+            ViewBag.ListStatus = new SelectList(new Dictionary<bool, string>() { { true, "Activo" }, { false, "Inactivo" } }.Select(a => new { value = a.Key, text = a.Value }), "value", "text");
             var customer = customersServices.GetbyId(id);
             return View(customer);
         }
 
         [HttpPost]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, [FromForm] Customer customer)
         {
             try
             {
+                customer.Id = id;
+                customersServices.Update(customer);
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                return RedirectToAction(nameof(Edit));
             }
         }
 
@@ -65,9 +67,9 @@ namespace Test_Invoice_Yhra.Controllers
                 customersServices.Delete(id);
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                return RedirectToAction(nameof(Index));
             }
 
         }

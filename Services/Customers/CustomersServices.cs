@@ -31,8 +31,14 @@ namespace Test_Invoice_Yhra.Services.Customers
         public bool Update(Customer customer)
         {
             var item = testInvoiceContext.Customers.Where(A => A.Id == customer.Id).FirstOrDefault();
+
             if (item != null)
             {
+                item.CustName = customer.CustName;
+                item.Adress = customer.Adress;
+                item.Status = customer.Status;
+                item.CustomerType = customer.CustomerType;
+
                 testInvoiceContext.Customers.Update(item);
                 testInvoiceContext.SaveChanges();
                 return true;

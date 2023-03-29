@@ -33,6 +33,13 @@ namespace Test_Invoice_Yhra.Services.InvoiceDetails
             var item = testInvoiceContext.InvoiceDetails.Where(A => A.Id == invoiceDetail.Id).FirstOrDefault();
             if (item != null)
             {
+                item.Price = invoiceDetail.Price;
+                item.Qty = invoiceDetail.Qty;
+                item.CustomerId = invoiceDetail.CustomerId;
+                item.SubTotal = invoiceDetail.SubTotal;
+                item.TotalItbis= invoiceDetail.TotalItbis;
+                item.Total = invoiceDetail.Total;   
+
                 testInvoiceContext.InvoiceDetails.Update(item);
                 testInvoiceContext.SaveChanges();
                 return true;

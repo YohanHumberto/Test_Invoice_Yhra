@@ -34,6 +34,7 @@ namespace Test_Invoice_Yhra.Services.CustomersTypes
             var item = testInvoiceContext.CustomerTypes.Where(A => A.Id == customerType.Id).FirstOrDefault();
             if (item != null)
             {
+                item.Description= customerType.Description;
                 testInvoiceContext.CustomerTypes.Update(item);
                 testInvoiceContext.SaveChanges();
                 return true;

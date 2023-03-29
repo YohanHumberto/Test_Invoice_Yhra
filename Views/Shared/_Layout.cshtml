@@ -23,6 +23,9 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Customers" asp-action="Index">Custemers</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="CustomersTypes" asp-action="Index">Custemers Types</a>
+                        </li> 
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Invoice" asp-action="Index">Invoice</a>
                         </li>
                     </ul>
@@ -30,6 +33,20 @@
             </div>
         </nav>
     </header>
+
+    @if (ViewBag.messageError != "" && ViewBag.messageError != null)
+    {
+        <div id="alert" class="alert alert-danger">
+            @ViewBag.messageError
+        </div>
+
+        <script>
+            setTimeout(() => {
+                document.getElementById("alert").remove();
+            }, 3000);
+        </script>
+    }
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -50,9 +67,9 @@
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
     <script>
-            $(document).ready( function () {
+        $(document).ready(function () {
             $('#myTable').DataTable();
-        } );
+        });
     </script>
 </body>
 </html>

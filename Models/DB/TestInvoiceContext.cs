@@ -24,7 +24,7 @@ public partial class TestInvoiceContext : DbContext
     public virtual DbSet<InvoiceDetail> InvoiceDetails { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-O5P4DG1; Initial Catalog=Test_Invoice; Integrated Security=true;  User Id=sa; Password= 123456; TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer("Data Source=YOHAN; Initial Catalog=Test_Invoice; Integrated Security=true;  User Id=sa; Password= 1234; TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -83,4 +83,5 @@ public partial class TestInvoiceContext : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
 }

@@ -31,10 +31,16 @@ namespace Test_Invoice_Yhra.Services.Invoices
 
         public bool Update(Invoice invoice)
         {
-            var item = testInvoiceContext.Customers.Where(A => A.Id == invoice.Id).FirstOrDefault();
+            var item = testInvoiceContext.Invoices.Where(A => A.Id == invoice.Id).FirstOrDefault();
             if (item != null)
             {
-                testInvoiceContext.Customers.Update(item);
+
+                item.CustomerId= invoice.CustomerId;
+                item.TotalItbis= invoice.TotalItbis;
+                item.SubTotal = invoice.SubTotal;
+                item.Total= invoice.Total;
+
+                testInvoiceContext.Invoices.Update(item);
                 testInvoiceContext.SaveChanges();
                 return true;
             }
