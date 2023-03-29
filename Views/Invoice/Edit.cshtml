@@ -1,0 +1,33 @@
+﻿@model Test_Invoice_Yhra.Models.DB.Invoice
+
+<main>
+    <div class="w-50 m-auto p-3 border">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="mt-2 mb-4">
+                <h4>Editar factura</h4>
+            </div>
+            <div class="mb-2">
+                <label>Cliente: </label>
+                @Html.DropDownListFor(model=> model.CustomerId, ViewBag.ListCustomers as SelectList,  new { @class = "form-control"})
+            </div>
+            <div class="mb-2">
+                <label>Cliente: </label>
+                @Html.EditorFor(model=> model.TotalItbis,new { htmlAttributes = new { @class = "form-control" , @readonly = true} })
+            </div>
+            <div class="mb-2">
+                <label>Cliente: </label>
+                @Html.EditorFor(model=> model.SubTotal,new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+            </div>
+            <div class="mb-2">
+                <label>Cliente: </label>
+                @Html.EditorFor(model=> model.Total,new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+            </div>
+            <div class="mb-2">
+                <button class="btn btn-primary" type="submit">Guardar</button>
+                <a class="btn btn-danger" asp-controller="Invoice" asp-action="Index">Cancelar</a>
+            </div>
+        }
+    </div>
+</main>

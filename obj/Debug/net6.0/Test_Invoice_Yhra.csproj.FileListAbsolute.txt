@@ -140,3 +140,4 @@ C:\Users\yhumb\OneDrive\Escritorio\Test_For_Empresas\Test_Invoice_Yhra\obj\Debug
 C:\Users\yhumb\OneDrive\Escritorio\Test_For_Empresas\Test_Invoice_Yhra\obj\Debug\net6.0\Test_Invoice_Yhra.pdb
 C:\Users\yhumb\OneDrive\Escritorio\Test_For_Empresas\Test_Invoice_Yhra\obj\Debug\net6.0\Test_Invoice_Yhra.genruntimeconfig.cache
 C:\Users\yhumb\OneDrive\Escritorio\Test_For_Empresas\Test_Invoice_Yhra\obj\Debug\net6.0\ref\Test_Invoice_Yhra.dll
+C:\Users\yohan\Desktop\PERSONAL\.net\Test_Invoice_Yhra\bin\Debug\net6.0\libman.json

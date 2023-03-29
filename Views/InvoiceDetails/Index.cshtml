@@ -1,15 +1,20 @@
-﻿@model List<Test_Invoice_Yhra.Models.DB.CustomerType>
+﻿@model List<Test_Invoice_Yhra.Models.DB.InvoiceDetail>
 
 <main class="border p-3">
     <div class="d-flex justify-content-between mb-3">
-        <h3>Lista tipos de clientes</h3>
-        <a class="btn btn-primary" asp-controller="CustomersTypes" asp-action="Create">Agregar</a>
+        <h3>Lista detalle de factura</h3>
+        <a class="btn btn-primary" asp-controller="InvoiceDetails" asp-action="Create">Agregar</a>
     </div>
     <table id="myTable" class="table table-bordered table-hover table-responsive table-striped">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Descrpcion</th>
+                <th>Factura id</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Total Itbis</th>
+                <th>Sub Total</th>
+                <th>Total</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
             </tr>
@@ -19,7 +24,12 @@
             {
                 <tr>
                     <td>@item.Id</td>
-                    <td>@item.Description</td>
+                    <td>@item.InvoiceId</td>
+                    <td>@item.Qty</td>
+                    <td>@item.Price</td>
+                    <td>@item.TotalItbis</td>
+                    <td>@item.SubTotal</td>
+                    <td>@item.Total</td>
                     <td>
                         @Html.ActionLink("Editar", "Edit", null, new {id = item.Id}, new { @class = "btn btn-warning"})
                     </td>

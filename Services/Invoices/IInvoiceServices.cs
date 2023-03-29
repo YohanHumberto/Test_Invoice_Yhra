@@ -4,7 +4,7 @@ namespace Test_Invoice_Yhra.Services.Invoices
 {
     public interface IInvoiceServices
     {
-        public Invoice GetbyId(int id);
+        public Invoice? GetbyId(int id);
 
         public List<Invoice> GetAll();
 
@@ -13,5 +13,8 @@ namespace Test_Invoice_Yhra.Services.Invoices
         public bool Update(Invoice invoice);
 
         public bool Delete(int id);
+
+        public bool UpdateBalance(int id);
+
     }
 }

@@ -7,7 +7,7 @@ public partial class InvoiceDetail
 {
     public int Id { get; set; }
 
-    public int CustomerId { get; set; }
+    public int InvoiceId { get; set; }
 
     public int Qty { get; set; }
 
@@ -19,5 +19,5 @@ public partial class InvoiceDetail
 
     public decimal Total { get; set; }
 
-    public virtual Invoice Customer { get; set; } = null!;
+    public virtual Invoice Invoice { get; set; } = null!;
 }

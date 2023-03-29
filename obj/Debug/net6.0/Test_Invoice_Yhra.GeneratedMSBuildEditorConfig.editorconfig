@@ -5,69 +5,80 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Test_Invoice_Yhra
 build_property.RootNamespace = Test_Invoice_Yhra
-build_property.ProjectDir = C:\Users\yhumb\OneDrive\Escritorio\Test_For_Empresas\Test_Invoice_Yhra\
+build_property.ProjectDir = C:\Users\yohan\Desktop\PERSONAL\.net\Test_Invoice_Yhra\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\yhumb\OneDrive\Escritorio\Test_For_Empresas\Test_Invoice_Yhra
+build_property.MSBuildProjectDirectory = C:\Users\yohan\Desktop\PERSONAL\.net\Test_Invoice_Yhra
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/yhumb/OneDrive/Escritorio/Test_For_Empresas/Test_Invoice_Yhra/Views/CustomersTypes/Create.cshtml]
+[C:/Users/yohan/Desktop/PERSONAL/.net/Test_Invoice_Yhra/Views/CustomersTypes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzVHlwZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yhumb/OneDrive/Escritorio/Test_For_Empresas/Test_Invoice_Yhra/Views/CustomersTypes/Edit.cshtml]
+[C:/Users/yohan/Desktop/PERSONAL/.net/Test_Invoice_Yhra/Views/CustomersTypes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzVHlwZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yhumb/OneDrive/Escritorio/Test_For_Empresas/Test_Invoice_Yhra/Views/CustomersTypes/Index.cshtml]
+[C:/Users/yohan/Desktop/PERSONAL/.net/Test_Invoice_Yhra/Views/CustomersTypes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzVHlwZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yhumb/OneDrive/Escritorio/Test_For_Empresas/Test_Invoice_Yhra/Views/Customers/Create.cshtml]
+[C:/Users/yohan/Desktop/PERSONAL/.net/Test_Invoice_Yhra/Views/Customers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yhumb/OneDrive/Escritorio/Test_For_Empresas/Test_Invoice_Yhra/Views/Customers/Edit.cshtml]
+[C:/Users/yohan/Desktop/PERSONAL/.net/Test_Invoice_Yhra/Views/Customers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yhumb/OneDrive/Escritorio/Test_For_Empresas/Test_Invoice_Yhra/Views/Customers/Index.cshtml]
+[C:/Users/yohan/Desktop/PERSONAL/.net/Test_Invoice_Yhra/Views/Customers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yhumb/OneDrive/Escritorio/Test_For_Empresas/Test_Invoice_Yhra/Views/Invoices/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZXNcQ3JlYXRlLmNzaHRtbA==
+[C:/Users/yohan/Desktop/PERSONAL/.net/Test_Invoice_Yhra/Views/InvoiceDetails/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZURldGFpbHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yhumb/OneDrive/Escritorio/Test_For_Empresas/Test_Invoice_Yhra/Views/Invoices/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZXNcRWRpdC5jc2h0bWw=
+[C:/Users/yohan/Desktop/PERSONAL/.net/Test_Invoice_Yhra/Views/InvoiceDetails/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZURldGFpbHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yhumb/OneDrive/Escritorio/Test_For_Empresas/Test_Invoice_Yhra/Views/Invoices/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZXNcSW5kZXguY3NodG1s
+[C:/Users/yohan/Desktop/PERSONAL/.net/Test_Invoice_Yhra/Views/InvoiceDetails/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZURldGFpbHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yhumb/OneDrive/Escritorio/Test_For_Empresas/Test_Invoice_Yhra/Views/Shared/Error.cshtml]
+[C:/Users/yohan/Desktop/PERSONAL/.net/Test_Invoice_Yhra/Views/Invoice/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yohan/Desktop/PERSONAL/.net/Test_Invoice_Yhra/Views/Invoice/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yohan/Desktop/PERSONAL/.net/Test_Invoice_Yhra/Views/Invoice/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yohan/Desktop/PERSONAL/.net/Test_Invoice_Yhra/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yhumb/OneDrive/Escritorio/Test_For_Empresas/Test_Invoice_Yhra/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/yohan/Desktop/PERSONAL/.net/Test_Invoice_Yhra/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yhumb/OneDrive/Escritorio/Test_For_Empresas/Test_Invoice_Yhra/Views/_ViewImports.cshtml]
+[C:/Users/yohan/Desktop/PERSONAL/.net/Test_Invoice_Yhra/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yhumb/OneDrive/Escritorio/Test_For_Empresas/Test_Invoice_Yhra/Views/_ViewStart.cshtml]
+[C:/Users/yohan/Desktop/PERSONAL/.net/Test_Invoice_Yhra/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yhumb/OneDrive/Escritorio/Test_For_Empresas/Test_Invoice_Yhra/Views/Shared/_Layout.cshtml]
+[C:/Users/yohan/Desktop/PERSONAL/.net/Test_Invoice_Yhra/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-xcgpolrkbh

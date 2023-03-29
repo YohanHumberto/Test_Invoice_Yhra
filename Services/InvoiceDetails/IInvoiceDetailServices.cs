@@ -4,14 +4,16 @@ namespace Test_Invoice_Yhra.Services.InvoiceDetails
 {
     public interface IInvoiceDetailServices
     {
-        public InvoiceDetail GetbyId(int id);
+        public delegate bool UpdateInvoiceHeader(int invoiceId);
+
+        public InvoiceDetail? GetbyId(int id);
 
         public List<InvoiceDetail> GetAll();
 
-        public bool Add(InvoiceDetail invoiceDetail);
+        public bool Add(InvoiceDetail invoiceDetail, UpdateInvoiceHeader updateInvoiceHeader);
 
-        public bool Update(InvoiceDetail invoiceDetail);
+        public bool Update(InvoiceDetail invoiceDetail, UpdateInvoiceHeader updateInvoiceHeader);
 
-        public bool Delete(int id);
+        public bool Delete(int id, UpdateInvoiceHeader updateInvoiceHeader);
     }
 }

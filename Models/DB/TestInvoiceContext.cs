@@ -24,7 +24,7 @@ public partial class TestInvoiceContext : DbContext
     public virtual DbSet<InvoiceDetail> InvoiceDetails { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Data Source=YOHAN; Initial Catalog=Test_Invoice; Integrated Security=true;  User Id=sa; Password= 1234; TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-O5P4DG1; Initial Catalog=Test_Invoice; Integrated Security=true;  User Id=sa; Password= 123456; TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -74,8 +74,8 @@ public partial class TestInvoiceContext : DbContext
             entity.Property(e => e.Total).HasColumnType("money");
             entity.Property(e => e.TotalItbis).HasColumnType("money");
 
-            entity.HasOne(d => d.Customer).WithMany(p => p.InvoiceDetails)
-                .HasForeignKey(d => d.CustomerId)
+            entity.HasOne(d => d.Invoice).WithMany(p => p.InvoiceDetails)
+                .HasForeignKey(d => d.InvoiceId)
                 .HasConstraintName("FK_InvoiceDetail_Invoice");
         });
 
