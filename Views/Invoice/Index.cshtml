@@ -13,6 +13,7 @@
                 <th>Total Itbis</th>
                 <th>Sub Total</th>
                 <th>Total</th>
+                <th>Detalle</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
             </tr>
@@ -27,8 +28,8 @@
                     <td>@item.SubTotal</td>
                     <td>@item.Total</td>
                     <td>
-                        @Html.ActionLink("Detalle", "Index", "InvoiceDetails", new {id = item.Id}, new { @class = "btn btn-warning"})
-                    </td> 
+                        @Html.ActionLink("Detalle", "Index", "InvoiceDetails", new {invoiceId = item.Id}, new { @class = "btn btn-info"})
+                    </td>
                     <td>
                         @Html.ActionLink("Editar", "Edit", null, new {id = item.Id}, new { @class = "btn btn-warning"})
                     </td>

@@ -14,11 +14,11 @@
             </div> 
             <div class="mb-2">
                 <label>Cantidad: </label>
-                @Html.EditorFor(model=> model.Qty,new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+                @Html.EditorFor(model=> model.Qty,new { htmlAttributes = new { @class = "form-control" } })
             </div>
             <div class="mb-2">
                 <label>Price: </label>
-                @Html.EditorFor(model=> model.Price,new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+                @Html.EditorFor(model=> model.Price,new { htmlAttributes = new { @class = "form-control" } })
             </div>
              <div class="mb-2">
                 <label>Total itbis: </label>
@@ -34,7 +34,7 @@
             </div>
             <div class="mb-2">
                 <button class="btn btn-primary" type="submit">Guardar</button>
-                <a class="btn btn-danger" asp-controller="InvoiceDetails" asp-action="Index">Cancelar</a>
+                @Html.ActionLink("Cancelar", "Index", null, new { invoiceId = ViewBag.InvoiceId }, new { @class = "btn btn-danger"})
             </div>
         }
     </div>

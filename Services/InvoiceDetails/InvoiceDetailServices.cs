@@ -25,7 +25,7 @@ namespace Test_Invoice_Yhra.Services.InvoiceDetails
         {
             invoiceDetail.SubTotal = invoiceDetail.Qty * invoiceDetail.Price;
             invoiceDetail.TotalItbis = invoiceDetail.SubTotal * new decimal(0.18);
-            invoiceDetail.Total = invoiceDetail.SubTotal * invoiceDetail.TotalItbis;
+            invoiceDetail.Total = invoiceDetail.SubTotal +  invoiceDetail.TotalItbis;
 
             var item = testInvoiceContext.InvoiceDetails.Add(invoiceDetail);
             testInvoiceContext.SaveChanges();

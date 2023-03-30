@@ -64,13 +64,13 @@ namespace Test_Invoice_Yhra.Services.Invoices
 
         public bool UpdateBalance(int id)
         {
-            Invoice? invoice = testInvoiceContext.Invoices.Where(A => A.Id == id).FirstOrDefault();
+            Invoice? invoice = testInvoiceContext.Invoices.Include(a=>a.InvoiceDetails).Where(A => A.Id == id).FirstOrDefault();
             if (invoice != null)
             {
                 invoice.SubTotal = 0;
                 invoice.InvoiceDetails.ToList().ForEach(a =>
                 {
-                    invoice.SubTotal += a.Total;
+                    invoice.SubTotal += a.SubTotal;
                 });
                 this.Update(invoice);
                 return true;

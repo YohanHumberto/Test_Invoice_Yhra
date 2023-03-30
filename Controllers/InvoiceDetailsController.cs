@@ -8,7 +8,6 @@ namespace Test_Invoice_Yhra.Controllers
 {
     public class InvoiceDetailsController : Controller
     {
-
         private readonly IInvoiceDetailServices invoiceDetailServices;
         private readonly IInvoiceServices invoiceServices;
 
@@ -18,15 +17,17 @@ namespace Test_Invoice_Yhra.Controllers
             this.invoiceServices = invoiceServices;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? invoiceId)
         {
-            var listInvoicesDetails = invoiceDetailServices.GetAll();
+            ViewBag.InvoiceId = invoiceId;
+            var listInvoicesDetails = invoiceDetailServices.GetAll().Where(a => a.InvoiceId == invoiceId || invoiceId < 0).ToList();
             return View(listInvoicesDetails);
         }
 
-        public IActionResult Create()
+        public IActionResult Create(int? invoiceId)
         {
-            ViewBag.ListInvoice = new SelectList(invoiceServices.GetAll(), "Id", "Id");
+            ViewBag.InvoiceId = invoiceId;
+            ViewBag.ListInvoice = new SelectList(invoiceServices.GetAll().Where(a => a.Id == invoiceId).ToList(), "Id", "Id");
             return View();
         }
 
@@ -34,12 +35,13 @@ namespace Test_Invoice_Yhra.Controllers
         public IActionResult Create([FromForm] InvoiceDetail invoiceDetail)
         {
             invoiceDetailServices.Add(invoiceDetail, invoiceServices.UpdateBalance);
-            return Redirect("Index");
+            return RedirectToAction(nameof(Index), new { invoiceId = invoiceDetail.InvoiceId });
         }
 
         public ActionResult Edit(int id)
         {
-            ViewBag.ListInvoice = new SelectList(invoiceServices.GetAll(), "Id", "Id");
+            ViewBag.InvoiceId = invoiceDetailServices.GetbyId(id)?.InvoiceId;
+            ViewBag.ListInvoice = new SelectList(invoiceServices.GetAll().Where(a => a.Id == ViewBag.InvoiceId).ToList(), "Id", "Id");
             var invoice = invoiceDetailServices.GetbyId(id);
             return View(invoice);
         }
@@ -55,20 +57,21 @@ namespace Test_Invoice_Yhra.Controllers
             }
             catch (Exception ex)
             {
-                return RedirectToAction(nameof(Edit));
+                return RedirectToAction(nameof(Edit), new { invoiceId = invoiceDetail.InvoiceId });
             }
         }
 
         public IActionResult Delete(int id)
         {
+            var invoiceId = invoiceDetailServices.GetbyId(id)?.InvoiceId;
             try
             {
                 invoiceDetailServices.Delete(id, invoiceServices.UpdateBalance);
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index), new { invoiceId });
             }
             catch (Exception ex)
             {
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index), new { invoiceId });
             }
 
         }

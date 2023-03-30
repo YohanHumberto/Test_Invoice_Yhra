@@ -1,9 +1,10 @@
 ﻿@model List<Test_Invoice_Yhra.Models.DB.InvoiceDetail>
 
 <main class="border p-3">
+    <h3>Lista detalle de factura</h3>
     <div class="d-flex justify-content-between mb-3">
-        <h3>Lista detalle de factura</h3>
-        <a class="btn btn-primary" asp-controller="InvoiceDetails" asp-action="Create">Agregar</a>
+        <a class="btn btn-info" asp-controller="Invoice" asp-action="Index">Regresar</a>
+        @Html.ActionLink("Agregar", "Create", null, new { invoiceId = ViewBag.InvoiceId }, new { @class = "btn btn-primary"})
     </div>
     <table id="myTable" class="table table-bordered table-hover table-responsive table-striped">
         <thead>
